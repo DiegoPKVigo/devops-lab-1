@@ -180,6 +180,7 @@ jobs:
             if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
               echo "⚠️  Security vulnerabilities detected!"
               echo "🔧 Consider updating base images or dependencies"
+              exit 1
             else
               echo "✅ No critical or high severity vulnerabilities found!"
             fi
